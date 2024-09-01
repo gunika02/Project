@@ -294,6 +294,17 @@ function completeTask(taskItem) {
 }
 
 function hideActionButtons(taskItem) {
+    const actionButtons = taskItem.querySelectorAll(".task-action");
+    actionButtons.forEach(button => {
+        button.remove();
+    });
+    return true;
+}
+
+
+
+
+/*function hideActionButtons(taskItem) {
     const deleteButton = taskItem.querySelector(".task-delete");
     const editButton = taskItem.querySelector(".task-edit");
     const completeButton = taskItem.querySelector(".task-complete");
